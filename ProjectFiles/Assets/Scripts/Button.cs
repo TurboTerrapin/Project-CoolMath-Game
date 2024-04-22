@@ -6,6 +6,7 @@ public class Button : MonoBehaviour
 {
     public PlayerController pc;
     public GameObject buttonPlatform;
+    public GameObject deathBlocks;
 
 
     public bool straightUp;
@@ -26,11 +27,13 @@ public class Button : MonoBehaviour
                 if (active)
                 {
                     buttonPlatform.SetActive(false);
+                    deathBlocks.SetActive(true);
                     active = false;
                 }
                 else
                 {
                     buttonPlatform.SetActive(true);
+                    deathBlocks.SetActive(false);
                     active = true;
                 }
             }
@@ -39,11 +42,13 @@ public class Button : MonoBehaviour
                 if (active)
                 {
                     buttonPlatform.SetActive(false);
+                    deathBlocks.SetActive(true);
                     active = false;
                 }
                 else
                 {
                     buttonPlatform.SetActive(true);
+                    deathBlocks.SetActive(false);
                     active = true;
                 }
             }

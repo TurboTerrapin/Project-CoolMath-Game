@@ -6,8 +6,10 @@ public class FallingTile : MonoBehaviour
 {
     public PlayerController pc;
 
+    public float timer;
     void Start()
     {
+        timer = 0;
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
@@ -15,8 +17,20 @@ public class FallingTile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && pc.currentOrientation == PlayerController.Orientations.StraightUp)
         {
-            pc.resetPlayer();
+            timer += Time.deltaTime;
+            if(timer > 0.1f)
+            {
+                timer = 0;
+                pc.resetPlayer();
+                
+            }
         }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        timer = 0;
+    }
+
 
 }

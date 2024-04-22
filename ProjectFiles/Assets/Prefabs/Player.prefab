@@ -1027,9 +1027,8 @@ MonoBehaviour:
   - {fileID: 1184848803294523688}
   - {fileID: 7110336440147231728}
   - {fileID: 1869560429990226866}
-  goal: {fileID: 0}
   currentOrientation: 0
-  inputDelay: 0.5
+  inputDelay: 0.4
   timer: 0
   turningRate: 1000
   targetRot: {x: 0, y: 0, z: 0, w: 0}
